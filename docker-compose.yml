@@ -1,0 +1,14 @@
+version: '2'
+
+
+services:
+  channels:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8001
+    ports:
+      - '8001:8001'
+  redis:
+    image: redis
+    ports:
+      - '6378:6379'
+      
